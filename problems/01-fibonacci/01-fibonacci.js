@@ -2,5 +2,5 @@
 Define function: fib(n) 
 Return the nth number in the fibonacci sequence. */
 function fib(n) {
-
+//writing some code
 }

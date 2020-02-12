@@ -21,7 +21,7 @@ console.log(fib(9));
 console.log(fib(10));
 
 //Iterative version. Longer then the recursive version but Works well for Larger numbers.
-function fib2(n) {
+function iterativeFib(n) {
     // If looking for 0th or 1st element of fibonacci returns input
     if (n <= 1 ){
         return n
@@ -41,17 +41,12 @@ function fib2(n) {
     return current
 }
 
-console.log(fib2(2));
-console.log(fib2(3));
-console.log(fib2(4));
-console.log(fib2(5));
-console.log(fib2(6));
-console.log(fib2(7));
-console.log(fib2(8));
-console.log(fib2(9));
-console.log(fib2(10));
-
-
-
-
-
+console.log(iterativeFib(2));
+console.log(iterativeFib(3));
+console.log(iterativeFib(4));
+console.log(iterativeFib(5));
+console.log(iterativeFib(6));
+console.log(iterativeFib(7));
+console.log(iterativeFib(8));
+console.log(iterativeFib(9));
+console.log(iterativeFib(10));

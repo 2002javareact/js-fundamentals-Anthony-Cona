@@ -6,7 +6,7 @@ For example substring('hello', 0, 3) should give 'hel' */
 
 
 function substring(someStr, startIndex, endIndex) {
-    if((NaN !== startIndex)||(NaN !== endIndex)){
+    if((NaN === startIndex)&&(NaN === endIndex)){
         throw "Input was incorrect Not a Number in startIndex or endIndex"
     }
     try {        
@@ -20,5 +20,5 @@ console.log(substring("Hello World", 0, 3));
 console.log(substring("Hello World", 3, 7));
 
 //Error Examples
-//console.log(substring(3, 3, 5));
-console.log(substring("ERROR", '1', 3));
+console.log(substring(3, 3, 5));
+//console.log(substring("ERROR", '1', 3));

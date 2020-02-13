@@ -6,19 +6,26 @@ For example substring('hello', 0, 3) should give 'hel' */
 
 
 function substring(someStr, startIndex, endIndex) {
-    if((NaN === startIndex)&&(NaN === endIndex)){
+    
+    if((typeof "string" === typeof startIndex) || (typeof "string" === typeof endIndex)){
         throw "Input was incorrect Not a Number in startIndex or endIndex"
     }
+
+    if((isNaN(startIndex)|| (isNaN(endIndex)))){
+        throw "Input was incorrect Not a Number in startIndex or endIndex"
+    }
+
     try {        
         return someStr.substring(startIndex, endIndex)
     } catch (error) {
         throw "Input was incorrect Not a String!"
     }
 }
+
 // Working Examples
 console.log(substring("Hello World", 0, 3));
 console.log(substring("Hello World", 3, 7));
 
 //Error Examples
-console.log(substring(3, 3, 5));
-//console.log(substring("ERROR", '1', 3));
+//console.log(substring(3, 3, 5));
+console.log(substring("ERROR", "0", 4));

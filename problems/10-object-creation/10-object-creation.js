@@ -14,7 +14,6 @@ function person2(name, age) {
     this.age = age
 }
 
-
 //ES6 Class Defination
 class person3 {
     constructor(name = null, age = null) {

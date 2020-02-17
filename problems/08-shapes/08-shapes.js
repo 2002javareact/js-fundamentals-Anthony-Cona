@@ -18,8 +18,49 @@ Example for printShape("Diamond", 5, "*");
  ***
 *****
  ***
-  * 
+  *
 */
 function printShape(shape, height, character) {
-  
+  switch (shape) {
+    case "Square":
+      for (let i = 0; i < height; i++) {
+        console.log(character.repeat(height));
+      }
+      break;
+
+    case "Triangle":
+      //
+      for (let i = 0; i < height; i++) {
+        console.log(character.repeat(i + 1));
+      }
+      break;
+
+    case "Diamond":
+      let growth = 1
+      let space = ((height / 2) - 1).toFixed(0)
+      for (let i = 0; i < height; i++) {
+
+        if (growth === height) {
+          while (growth > 0) {
+            console.log(" ".repeat(space) + character.repeat(growth));
+            growth -= 2;
+            space += 1
+          }
+        } else if (growth < height && growth > 0) {
+          console.log(" ".repeat(space) + character.repeat(growth));
+          growth += 2
+          space -= 1
+        }
+      }
+      break;
+
+    default:
+      console.log('Please enter a valid Shape "Square","Triangle","Diamond"');
+
+      break;
+  }
 }
+
+printShape("Square", 9, "0")
+printShape("Triangle", 9, "$")
+printShape("Diamond", 9, "*")
